@@ -33,9 +33,9 @@ function buildCalendar(lifeSpan) {
           parseFloat(y + startingYear + '.' + (w + 1000)) >
           parseFloat(currentYear + '.' + (parseInt(currentWeek) + 1000)),
         isToday:
-          parseFloat(y + startingYear + '.' + w) ==
+          parseFloat(y + startingYear + '.' + w) ===
           parseFloat(currentYear + '.' + currentWeek),
-        isBirthday: w == 0,
+        isBirthday: w === 0,
         event: 0,
       })
     }
@@ -142,7 +142,7 @@ function buildCalendar(lifeSpan) {
     e['eventYW'] = d[1] + '-' + d[0]
 
     var index = weeks.findIndex(function(d) {
-      return d.dateYW == e.eventYW
+      return d.dateYW === e.eventYW
     })
 
     weeks[index].event = e.title
