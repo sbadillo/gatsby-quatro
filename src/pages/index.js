@@ -1,44 +1,26 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import PostListing from '../components/Posts/PostListing'
+// import { graphql } from 'gatsby'
+
+import LifeGrid from '../components/LifeGrid'
 
 import Layout from '../components/layout'
 
-const IndexPage = ({ data, location }) => (
+const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <h1>Hi people</h1>
-    <h2>Posts</h2>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <PostListing key={node.id} post={node} />
-    ))}
+    <h1>Text</h1>
+    <LifeGrid />
   </Layout>
 )
 
 export default IndexPage
 
-export const query = graphql`
-  query SiteMeta {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          id
-          html
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date(formatString: "DD MMM YYYY")
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query SiteMeta {
+//     site {
+//       siteMetadata {
+//         title
+//         description
+//       }
+//     }
+//   }
+// `
