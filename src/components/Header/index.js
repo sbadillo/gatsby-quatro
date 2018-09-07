@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const HeaderWrapper = styled.div`
-  /* background: indianred; */
-  /* border: 1px solid black; */
   margin-bottom: 1.45rem;
   overflow: hidden;
   position: relative;
@@ -14,7 +11,8 @@ const HeaderWrapper = styled.div`
 const HeaderContainer = styled.div`
   margin: 0 auto;
   max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  padding: 0.5rem 1.0875rem;
+  border-bottom: 1px dashed gray;
   position: relative;
   z-index: 2;
   justify-content: center;
@@ -24,18 +22,18 @@ const HeaderContainer = styled.div`
 const MainNav = styled.nav`
   ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    margin: auto;
     li {
-      margin-left: 15px;
-      margin-right: 15px;
+      margin: auto 15px;
       font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       a {
         text-decoration: none;
         color: gray;
         &:hover {
-          border-bottom: 1px dashed lightgray;
+          color: slategray;
         }
       }
     }
@@ -44,12 +42,8 @@ const MainNav = styled.nav`
 
 export default class Header extends Component {
   render() {
-    const { location } = this.props
     return (
-      <HeaderWrapper
-        isHome={location.pathname === '/'}
-        ref={wrapper => (this.wrapper = ReactDOM.findDOMNode(wrapper))}
-      >
+      <HeaderWrapper>
         <HeaderContainer>
           <MainNav>
             <ul>
@@ -61,6 +55,9 @@ export default class Header extends Component {
               </li>
               <li>
                 <Link to="/photography/">photography</Link>
+              </li>
+              <li>
+                <Link to="/photographyTwo/">photographyTwo</Link>
               </li>
             </ul>
           </MainNav>

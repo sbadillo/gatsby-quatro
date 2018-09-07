@@ -38,6 +38,7 @@ const Layout = ({ children, data, location }) => (
           <html lang="en" />
         </Helmet>
         <Header
+          // pass data to header component
           siteTitle={data.site.siteMetadata.title}
           data={data}
           location={location}
