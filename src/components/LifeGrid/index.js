@@ -48,7 +48,7 @@ function buildCalendar(lifeSpan) {
   var myEvents = [
     {
       start: 'Oct 22 2018',
-      type: 'work',
+      type: 'prof',
       title: 'Started job at engie',
     },
     {
