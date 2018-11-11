@@ -47,9 +47,14 @@ function buildCalendar(lifeSpan) {
   // type of event can be : life, prof, educ
   var myEvents = [
     {
+      start: 'Oct 22 2018',
+      type: 'work',
+      title: 'Started job at engie',
+    },
+    {
       start: 'Aug 30 2018',
       type: 'life',
-      title: 'Finally got the French residenceeeeeeeeee!!!!!!',
+      title: 'Finally got the French residence',
     },
     {
       start: 'Sept 29 2017',
@@ -60,13 +65,13 @@ function buildCalendar(lifeSpan) {
     {
       start: 'Dec 23 2016',
       type: 'life',
-      title: 'Got a temporary visa to come back to France',
+      title: 'temporary visa to come back to France',
     },
     { start: 'Dec 08 2016', type: 'life', title: 'Pacsed with Chan' },
     {
       start: 'Dec 05 2015',
       type: 'prof',
-      title: 'Started working at AERSPIRE',
+      title: 'Started job at AERSPIRE',
     },
     {
       start: 'Aug 01 2015',
@@ -97,13 +102,12 @@ function buildCalendar(lifeSpan) {
     {
       start: 'Mar 01 2012',
       type: 'prof',
-      title: 'Started working at WISE Better Homes, Taranaki New Zealand',
+      title: 'Started job at WISE Better Homes, Taranaki New Zealand',
     },
     {
       start: 'Sep 01 2011',
       type: 'prof',
-      title:
-        'Started working as a (poor) energy contract sales agent, New Zealand',
+      title: 'Started job energy contract sales agent -_-, New Zealand',
     },
     {
       start: 'Aug 01 2011',
