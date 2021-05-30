@@ -6,14 +6,15 @@ import { Parallax } from 'react-spring'
 const randomUnsplashUrl = () =>
   'https://source.unsplash.com/random/' + Math.floor(Math.random() * 100 + 1)
 
-const sbadilloUnsplashUrl = () =>
-  'https://source.unsplash.com/user/sbadillo'
+// Not working because the api return always the same photo :(
+// const sbadilloUnsplashUrl = () =>
+//   'https://source.unsplash.com/user/sbadillo'
 
 const randomSpeed = () => Math.random() * (0.2 - 0) + 0
 
 const ParallaxPhoto = ({ page = page }) => (
   <Parallax.Layer offset={page} speed={randomSpeed()}>
-    <img src={sbadilloUnsplashUrl()} style={{ height: '80%' }} />
+    <img src={randomUnsplashUrl()} style={{ height: '80%' }} />
   </Parallax.Layer>
 )
 
