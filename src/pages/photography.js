@@ -7,7 +7,7 @@ const randomUnsplashUrl = () =>
   'https://source.unsplash.com/random/' + Math.floor(Math.random() * 100 + 1)
 
 const sbadilloUnsplashUrl = () =>
-  'https://source.unsplash.com/user/sbadillo/' + Math.floor(Math.random() * 100 + 1)
+  'https://source.unsplash.com/user/sbadillo'
 
 const randomSpeed = () => Math.random() * (0.2 - 0) + 0
 
